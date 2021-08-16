@@ -1,0 +1,112 @@
+.Joke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #eeeeee;
+  font-weight: 400;
+}
+
+.Joke-buttons {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.Joke-text {
+  width: 75%;
+  font-size: 1.2rem;
+}
+
+.Joke-votes {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  border: 3px solid red;
+
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fa-arrow-up,
+.fa-arrow-down {
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.fa-arrow-up:hover {
+  color: #8bc34a;
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  transition: all 0.3s;
+}
+
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+.fa-arrow-down:hover {
+  color: #f44336;
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+
+.Joke-smiley {
+  font-size: 3em;
+  margin-left: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Joke-smiley:hover {
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
